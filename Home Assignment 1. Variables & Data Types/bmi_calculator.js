@@ -23,4 +23,29 @@ function calculateBMI(weight, height){
 }
 
 // input weight in kgs, height in cm
-console.log(calculateBMI(65, 173))
+// console.log(calculateBMI(65, 173))
+
+
+// UNIT TESTING 
+function canCalculateBMI(weight, height){
+    if(!weight || !height){
+        isValid = "INVALID"
+    }else{
+        if(Number.isInteger(height) && Number.isInteger(weight)){
+            isValid = "VALID"
+        }else{
+            isValid = "INVALID"
+        }
+    }
+
+    console.log(`A Weight: ${weight} and Height: ${height} is ${isValid} for BMI Calculation!`)
+
+}
+
+// This tests check if payloads are VALID or not for BMI Calculations
+canCalculateBMI(65, 173)            // VALID:   Correct
+canCalculateBMI(null, 173)          // INVALID: Correct
+canCalculateBMI(null, "")           // INVALID: Correct
+canCalculateBMI("str1", "str2")     // INVALID: Correct
+canCalculateBMI("1", 5)             // INVALID: Correct
+canCalculateBMI(50, 145)            // VALID:   Correct
