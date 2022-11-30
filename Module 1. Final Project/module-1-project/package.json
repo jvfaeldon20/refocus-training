@@ -1,5 +1,5 @@
 {
-  "name": "Module-1",
+  "name": "module-1-project",
   "version": "1.0.0",
   "description": "Individual Project for Module 1",
   "main": "main.js",
@@ -8,7 +8,7 @@
     "test": "jest"
   },
   "keywords": [],
-  "author": "Jian Jaico",
+  "author": "JV Faeldon",
   "license": "ISC",
   "dependencies": {
     "@babel/preset-env": "^7.19.1",
