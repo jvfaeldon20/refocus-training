@@ -1,0 +1,76 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+  background: #192140;
+}
+
+.container{
+  margin-top: 5%;
+  display: flex;
+}
+
+.input-form{
+  margin: auto;
+}
+
+#news-list-container{
+  margin-top: 3%;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.news-list-item{
+  font-size: 18px;
+  color: #fff;
+  font-family: sans-serif;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  border: 3px solid #dcf10d;
+  border-radius: 15px;
+  background-color: #192140;
+  padding: 10px;
+}
+
+.input-form input{
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  vertical-align: bottom;
+  border: 1px solid #192140;
+}
+
+.input-form button{
+  background-color: #dcf10d;
+  border: none;
+  color: #192140;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.input-form button:hover{
+  box-shadow: 0 5px 15px rgba(254, 254, 254, 0.577);
+}
+
+.small-button-container{
+  margin-top: 5px;
+}
+
+.small-button-container button{
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 10px 10px;
+}
+
+.small-button-container span{
+  color: #fff;
+}
