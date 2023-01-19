@@ -1,4 +1,4 @@
-# My-Refocus-Assignments
+# Refocus Training
 
 
 Hi everyone! I am JV. One of the students here in Refocus 
