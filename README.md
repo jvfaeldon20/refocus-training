@@ -2,9 +2,9 @@
 
 
 
-Hi everyone! I am JV. One of the students here in Refocus. 
-I've been working already in the software industry for 4 years and currently working 
+Hi everyone! I am **JV**. One of the students here in Refocus. 
+I've been working already in a software industry for almost 4 years and currently working 
 as a Frontend developer. 
 
-The main reason I also enrolled here in Refocus is to acquire the entire concepts of fullstack development and become
-a fullstack developer.
+The main reason I also enrolled here in Refocus is to acquire all the knowledges I needed to fully utilize my skills and 
+capabilities and become a **Fullstack Developer**.
