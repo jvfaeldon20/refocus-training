@@ -1,4 +1,5 @@
-# Refocus Training
+![image](https://user-images.githubusercontent.com/61104555/214002569-610ecb96-32ea-47d6-9237-0c1e8c48c616.png)
+
 
 
 Hi everyone! I am JV. One of the students here in Refocus. 
