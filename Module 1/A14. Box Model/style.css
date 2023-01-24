@@ -1,0 +1,29 @@
+/* BASIC PART */
+section {
+    border: 1px solid gray;
+    padding: 16px;
+    height: 400px;
+    width: 400px;
+}
+/* 
+h1 {
+    margin-bottom: 14px;
+}
+
+p {
+    color: red;
+    padding-right: 38px;
+} */
+
+
+
+/* ADVANCED PART */
+h1 {
+    margin: 10px 5px;
+    padding: 10px 13px 11px 12px;
+}
+
+p {
+    padding: 6px 0px;
+    margin: 0px 16px;
+}

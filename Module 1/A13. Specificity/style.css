@@ -1,0 +1,11 @@
+*{
+    color: gray; 
+}
+
+h1 {
+    color: purple;
+}
+
+section > p {
+    color: pink;
+}
