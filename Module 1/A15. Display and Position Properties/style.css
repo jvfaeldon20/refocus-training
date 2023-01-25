@@ -96,3 +96,8 @@
 .hidden {
     display: inline-block;
 }
+
+.Cat {
+    background-image: url("./cat.png");
+    background-size: cover;
+}
