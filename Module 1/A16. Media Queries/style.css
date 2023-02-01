@@ -1,0 +1,32 @@
+/* large devices */
+@media only screen and (min-width: 1312px) {
+    .tablet-device, .mobile-device {
+         display: none;
+    }
+
+    .pc-device {
+        display: block;
+    }
+ }
+
+/* medium devices */
+@media only screen and (max-width: 992px) {
+    .pc-device, .mobile-device {
+         display: none;
+    }
+
+    .tablet-device {
+        display: block;
+    }
+ }
+
+/* mobile devices */
+@media only screen and (max-width: 688px) {
+   .tablet-device, .pc-device {
+        display: none;
+   }
+
+   .mobile-device {
+        display: block;
+   }
+}

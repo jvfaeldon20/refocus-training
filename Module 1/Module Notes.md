@@ -234,3 +234,8 @@ Stages of Testing
 3. Assert
 
 Unit testing can only check values in string, boolean and number
+
+
+Flexbox 
+- flexible box is a tool for layouting
+- contains the parent and the children

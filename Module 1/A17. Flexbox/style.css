@@ -1,0 +1,105 @@
+/* ------------------- BASIC PART-------------------  */
+/* general class */
+.box {
+    height: 150px;
+    width: 150px;
+}
+
+/* box 1 class */
+.parent-box-1 {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    border: 5px solid black;
+    align-items: center;
+}
+
+.box-1 {
+    background-color: aqua;
+}
+
+
+/* box 2 class */
+.parent-box-2 {
+    display: flex;
+    height: 400px;
+    width: 100%;
+    border: 3px solid red;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-2 {
+    background-color: bisque;
+}
+
+
+
+/* box 3 class */
+.parent-box-3 {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+.box-3 {
+    background-color: blueviolet;
+}
+
+/* ------------------- END OF BASIC PART-------------------  */
+
+
+
+
+/* ------------------- DIFFICULT PART-------------------  */
+/* general class */
+.box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 300px;
+    background-color: cadetblue;
+}
+
+.child {
+    height: 50px;
+    width: 50px;
+}
+
+/* family 1 class */
+.parent-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.child-1 {
+    background-color: brown;
+    justify-content: start;
+}
+
+.child-2 {
+    background-color: red;
+}
+
+
+/* family 2 class */
+.parent-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.child-3 {
+    background-color: black;   
+}
+
+.child-4 {
+    background-color: gray;   
+}
+
+
+
+
+
+/* ------------------- END OF DIFFICULT PART-------------------  */
+
