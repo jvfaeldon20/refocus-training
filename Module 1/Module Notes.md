@@ -239,3 +239,9 @@ Unit testing can only check values in string, boolean and number
 Flexbox 
 - flexible box is a tool for layouting
 - contains the parent and the children
+
+
+Displaying webpage in different devices
+- for testing which network resources cause the issue, go to network > disable cache. check the logs 
+- make sure to load correct resolution accoring to device screen orientatation.
+
