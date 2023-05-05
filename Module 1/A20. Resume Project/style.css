@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #4c4c4c;
 }
 
 /* MAIN CSS */
@@ -104,13 +104,40 @@ body {
 }
 
 
-/* PROFILE CSS */
-.profile-container {
-    position: relative;
-    height: 100vh;
+
+
+/* ABOUT ME */
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
 }
 
-.profile-container > .social-media {
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 150;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+/* PROFILE CSS */
+.about-container {
+    top: 200;
+    position:sticky;
+    height: 30vh;
+}
+
+.about-container > .social-media {
     position: relative;
     color: #fff;
     font-size: 40px;
@@ -120,14 +147,15 @@ body {
     margin: 0px auto;
 }
 
-.profile-container > .social-media > ul > li, a {
+.about-container > .social-media > ul > li, a {
     list-style-type: disc;
     display: inline-block;
     color: #fff;
-    padding: 0 5px;
+    padding: 5px 5px 10px 5px;
+    margin-left: 20px;
 }
 
-.profile-container > .social-media > ul > li > a:hover {
+.about-container > .social-media > ul > li > a:hover {
     color: #8ebd24;
     transition: 0.3s;
 }
@@ -138,7 +166,6 @@ body {
     height: 50px;
     display: flex;
     justify-content: space-between;
-    padding: 0px 60px;
     margin-bottom: 30px;
 }
 
@@ -175,10 +202,33 @@ body {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
+.navigation-header {
+    display: grid;
+    margin: 0px auto;
+    padding: 20px;;
+    background-color: rgba(17, 70, 107);
+}
+
+.navigation-header > ul > li {
+    list-style-type: disc;
+    display: inline-block;
+}
+
+.navigation-header > ul > li > a {
+    text-decoration: none;
+}
+
+.navigation-header > ul > li > a:hover {
+    border-bottom: 3px solid #8ebd24;
+    color: #fff;
+}
+
+
 .profile-headercard {
+    border-top: 10px solid #8ebd24;
+    background-color: rgba(17, 70, 107);
     padding: 20px;
     position: relative;
-    background-color: #fff;
     height: 18vh;
     margin: 0px auto;
     display: grid;
@@ -192,28 +242,46 @@ body {
     border: 5px solid #f5f5f5;
     height: 150px;
     width: 150px;
+    border-radius: 50%;
+}
+
+.profile-data__avatar {
+    position: relative;
+    background-size: cover;
+    background-image: url(assets/img/profile-thumb.png);
+    height: 50;
+    width: 59;
+    margin-right: 20px;
 }
 
 .profile-header-text > .name{
+    text-align: center;
     font-size: 35px;
-    color: rgba(22, 99, 153, 0.9);
+    color: #fff;
 }
 
 .profile-header-text > .sub-name {
     margin: -10px auto;
-    font-weight: 200;
-    color: #6e828e;
+    font-size: 25px;
+    font-weight: 250;
+    color: #e5e5e5;
 }
 
 .profile-header-text > .contact-info {
     padding-top: 15px;
+    color: #fff;
+}
+
+.profile-header-text > .mail {
+    color: #fff;
+    margin-top: -10px;
 }
 
 .profile-header-text > ul > li  {
-    font-size: 16px;
+    font-size: 15px;
     list-style-type: none;
     display: inline-block;
-    padding: 10px 20px 0px 0px;
+    padding: 15px 20px 0px 0px;
 }
 
 .profile-header-text > ul > li > i {
@@ -224,33 +292,26 @@ body {
     color: black;
 }
 
+.personal-data > .info > li {
+    text-decoration: none;
+}
 
-
-
-
-
-
-
-
-
-
-
-/* info section */
 .profile-card {
     padding: 20px;
     position: relative;
     background-color: #fff;
-    height: 60vh;
+    height: 65vh;
     margin: 10px auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    text-align: center;
 }
 
 .skill-card {
     padding: 20px;
     position: relative;
     background-color: #fff;
-    height: 60vh;
+    height: 65vh;
     margin: 10px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -260,7 +321,7 @@ body {
     padding: 20px;
     position: relative;
     background-color: #fff;
-    height: 60vh;
+    height: 65vh;
     margin: 10px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -270,15 +331,46 @@ body {
     padding: 20px;
     position: relative;
     background-color: #fff;
-    height: 60vh;
+    height: 65vh;
     margin: 10px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
+.overlay{
+    background-color: rgba(22, 99, 153, 0.9);
+}
+
+.profile-data {
+    padding: 0 250px;
+    margin-top: 50px;
+}
+
+.header-title {
+    font-size: 30px;
+}
+
+.content {
+    font-size: 15pxs;
+}
+
+.spacer{
+    height: 2px;
+    background-color: #8ebd24;
+    width: 200px;
+    display: grid;
+    margin: 5px auto;
+}
+
+.about-me {margin-top: 20px;
+    height: 20%;
+    width: auto;
+}
+
+
 /* large devices */
 @media only screen and (min-width: 769px) {
-    .profile-headercard {
+    .profile-headercard, .navigation-header {
         width: 1280px;
     }
 
