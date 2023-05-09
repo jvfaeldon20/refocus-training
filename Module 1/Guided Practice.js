@@ -312,13 +312,13 @@
 
 // g. MAP METHOD = creates a new array transforming the old one
 // const inventors = [
-//     {firsName: "Thoms", lastName: "Edison"},
-//     {firsName: "Benjamin", lastName: "Franklin"},
-//     {firsName: "Leonardo", lastName: "da Vinci"},
+//     {firsName: "Thoms", lasName: "Edison"},
+//     {firsName: "Benjamin", lasName: "Franklin"},
+//     {firsName: "Leonardo", lasName: "da Vinci"},
 // ]
 
 // const fullName = inventors.map(function(value){
-//     return [value.firsName, value.lastName].join(" ")
+//     return [value.firsName, value.lasName].join(" ")
 // })
 // console.log(fullName)
 
@@ -345,7 +345,7 @@
 // let students = [
 //     { 
 //         firsName: "Albert", 
-//         lastName: "Edison", 
+//         lasName: "Edison", 
 //         subjects: [
 //             {
 //                 subjectName: "Math",
@@ -377,7 +377,7 @@
 //     },
 //     { 
 //         firsName: "Tony", 
-//         lastName: "Doe", 
+//         lasName: "Doe", 
 //         subjects: [
 //             {
 //                 subjectName: "Math",
@@ -409,7 +409,7 @@
 //     },
 //     { 
 //         firsName: "Leo", 
-//         lastName: "Alonzo", 
+//         lasName: "Alonzo", 
 //         subjects: [
 //             {
 //                 subjectName: "Math",
@@ -458,13 +458,13 @@
 //         // [
 //         //     {
 //         //       firsName: 'Tony',
-//         //       lastName: 'Doe',
+//         //       lasName: 'Doe',
 //         //       subjects: [ [Object], [Object] ],
 //         //       averageGrade: '3.70'
 //         //     },
 //         //     {
 //         //       firsName: 'Leo',
-//         //       lastName: 'Alonzo',
+//         //       lasName: 'Alonzo',
 //         //       subjects: [ [Object], [Object] ],
 //         //       averageGrade: '3.80'
 //         //     }

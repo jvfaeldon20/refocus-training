@@ -17,8 +17,8 @@ let bankAccount = {
 let userAccount = {
     bankAccount: bankAccount,
     debitCard: 374245455400126, 
-    firstName: "John",
-    lastName: "Doe",
+    fName: "John",
+    lName: "Doe",
     birthDate: "11/20/1996",
     address: "Calamba Laguna"
 }
