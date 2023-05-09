@@ -12,76 +12,225 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <title>JV Faeldon</title>
 </head>
 <body>
     <main class="page-container">
         <!-- MAIN -->
-        <!-- <section class="main-container" id="main">
+        <section class="main-container" id="main">
             <div class="overlay"></div>
             <div class="profile-thumb"></div>
             <h1 class="animate__animated animate__fadeInUp">
                 <span>- JV Faeldon -</span>
             </h1>
-            <h3><span class="role-description">Web Developer / UI Designer </span></h3>
+            <h3><label class="role-description">Web Developer / UI Designer </label></h3>
             <div class="social-media">
-                <ul class="social-media">
+                <ul >
                     <li><a href="https://www.facebook.com/jvfaeldon920/" data-toggle="tooltip" title="Facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/jonel-faeldon-62b62bb7/" data-toggle="tooltip" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
                     <li><a href="https://www.github.com/jvfaeldon20/" data-toggle="tooltip" title="GitHub" target="_blank"><i class="fa-brands fa-github-alt"></i></a></li>
                     <li><a href="https://www.instagram.com/kaizer092" data-toggle="tooltip" title="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                 </ul>
             </div>
-            <a href="#nav-profile" class="view-more">
-                View Profile
-            </a>
-        </section> -->
+            <a href="#navigation-header" class="view-more">View Profile</a>
+        </section>
 
-        <!-- ABOUT ME -->
-        <section class="about-container header" id="profile">
-            <div class="navigation-header">
-                <ul class="nav-link">
-                    <li><a href="#" id="nav-profile">ABOUT ME</a></li>
-                    <li><a href="#" id="nav-skill">SKILLS</a></li>
-                    <li><a href="#" id="nav-project">PROJECTS</a></li>
-                    <li><a href="#" id="nav-experience">EXPERIENCES</a></li>
-                </ul>
+
+        <!-- NAVIGATION -->
+        <nav class="navigation-header" id="navigation-header">
+            <ul class="nav-links">
+                <li>
+                    <a href="#about-me" data-toggle="tooltip" title="ABOUT ME">
+                        <i class="fa-solid fa-user"></i>
+                        <label class="link-name">ABOUT ME</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills" data-toggle="tooltip" title="SKILLS">
+                        <i class="fa-solid fa-code"></i>
+                        <label class="link-name">SKILLS</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#experiences" data-toggle="tooltip" title="EXPERIENCES">
+                        <i class="fa-solid fa-timeline"></i>
+                        <label class="link-name">EXPERIENCES</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" data-toggle="tooltip" title="LET'S TALK">
+                    <i class="fa-solid fa-phone"></i>
+                        <label class="link-name">LET'S TALK</label>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- CONTENTS -->
+        <!-- ABOUT  -->
+        <section class="content" id="about-me">
+            <div class="content-header">
+                <h1 class="header-title">About Me</h1>
+            </div>
+            <div class="content-body">
+                <img src="assets/img/about.png" class="about-img">
+                <p class="about-description">
+                    Hi I am Jonel Vivas Faeldon. A graduate of Polytechnic University of the Philippines and an object-driven web developer with more than 4 years of experience in web development using HTML, CSS, Javascript. 
+                    <br><br>
+                    
+                    Throughout my web developing experience, I have strengthened my skills and capabilities in frontend development and operations in which I have successfully delivered over 25 web applications to the product owner
+                    with quality unit autotesting and also gained knowledge in SCRUM agile project management, CI/CD container adoption for service delivery and autotesting integration. <br><br>
+                    
+                    These technical experiences have also honed my skills in interpersonal communication, decision-making and problem solving. <br><br>
+                    
+                    I am now upgrading my skillset in developing and is now eager to
+                    break into a full-stack developer role.
+                </p>
             </div>
         </section>
 
-        <section>
-            <!-- PROFILE SECTION -->
-            <div id="profile" class="card profile-card animate__animated animate__fadeIn">
-				<div class="profile-data">
-                    <h1 class="header-title">About Me</h1>
-                    <div class="spacer"></div>
-                    <img src="assets/img/about-me.jpg" class="about-me">
-                    <p class="content">
-                        Hi I am JV. A graduate of Polytechnic University of the Philippines and an object-driven web developer with more than 4 years of experience in web development using HTML, CSS, Javascript. 
-                        <br><br>
-                        
-                        In those years of developing experience, I have strengthened my skills and capabilities in web development and operations in which I have successfully delivered over 25 web applications to the product owner
-                        with quality unit autotesting and also gained knowledge of operation with SCRUM, CI/CD container adoption for agile service delivery and has honed skills in interpersonal communication, decision-making and problem solving. <br><br>
-                        
-                        I am now upgrading my skillset in developing and is now eager to
-                        break into a full-stack developer role.
-                    </p>
+
+        <!-- SKILLS -->
+        <section class="content" id="skills">
+            <div class="content-header">
+                <h1 class="header-title">Skills</h1>
+            </div>
+            <div class="content-body skills">
+                <div class="skills-category">
+                    <h2>Frontend</h2>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Javascript</li>
+                        <li>Bootstrap</li>
+                        <li>JQuery</li>
+                        <li>Vue</li>
+                        <li>React</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h2>Backend</h2>
+                    <ul>
+                        <li>PHP</li>
+                        <li>MySQL</li>
+                        <li>RESTful API</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h2>Integration</h2>
+                    <ul>
+                        <li>Jenkins</li>
+                        <li>Sonarqube</li>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>Thycotic</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h2>Autotesting</h2>
+                    <ul>
+                        <li>JEST</li>
+                        <li>Nightwatch</li>
+                    </ul>
                 </div>
             </div>
+        </section>
 
-            <!-- SKILL SECTION -->
-            <div id="skill" class="card skill-card profile-card animate__animated animate__fadeIn">
-                <h1>skills</h1>
+
+        <!-- EXPERIENCES -->
+        <section class="content" id="experiences">
+            <div class="content-header">
+                <h1 class="header-title">Experiences</h1>
             </div>
-
-            <!-- PROJECT SECTION -->
-            <div id="project" class="card project-card profile-card animate__animated animate__fadeIn">
-                <h1>projects</h1>
+            <div class="timeline">
+                <ul>
+                    <li class="animate-box">
+                        <div class=""><i class="icon-suitcase"></i></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h3 class="timeline-title">Senior Frontend Engineer</h3>
+                                <span class="company">Trend Micro Inc. - Jun 2021 - Present</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Focusing on IT services automation, Infrastructure as code,
+                                    application development and operation with Scrum, CICD,
+                                    container adoption for agile service delivery and future
+                                    sustainability with security consideration on public cloud
+                                    environment (AWS)</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted animate-box">
+                        <div class=""><i class="icon-suitcase"></i></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h3 class="timeline-title">Backend Developer</h3>
+                                <span class="company">Eurekare Corp. - Aug 2019 - May 2021</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Optimized the previous backend services and developed a
+                                    well structured database, RESTful and SOAP APIs and server
+                                    setup.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="animate-box timeline-unverted">
+                        <div class=""><i class="icon-suitcase"></i></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h3 class="timeline-title">Web Developer</h3>
+                                <span class="company">Globe Telecom - Jan 2018 - Jul 2019</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p>
+                                    Provided onsite support to the client about the services
+                                    developed and delivered by our team whether a support to
+                                    system issue, CRM reports or new feature requests.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted animate-box">
+                        <div class=""><i class="icon-suitcase"></i></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h3 class="timeline-title">Application Engineer 1</h3>
+                                <span class="company">Canon Business Machines Philippines - Nov 2016 - Mar 2017</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Lead integration of company’s internal manual process to web
+                                    application and forms.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
+        </section>
+        
 
-            <!-- EXPERIENCE SECTION -->
-            <div id="experience" class="card experience-card profile-card animate__animated animate__fadeIn">
-                <h1>experiences</h1>
+        <!-- CONTACT -->
+        <section class="content contact" id="contact">
+            <div class="content-header">
+                <h1 class="header-title">Let's Talk</h1>
+            </div>
+            <div class="timeline">
+                <ul>
+                    <li class="animate-box">
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <a href="https://m.me/jvfaeldon920" target='_blank' rel='noreferrer' class="icon-button" data-toggle="tooltip" title="Messenger"><i class="fa-brands fa-facebook-messenger fa"></i></a>
+                                <a href="mailto:jonelfaeldon@gmail.com" target='_blank' rel='noreferrer' class="icon-button" data-toggle="tooltip" title="Gmail"><i class="fa-solid fa-envelope fa"></i></a>
+                                <a href="https://api.whatsapp.com/send?phone+9171481701" target='_blank' rel='noreferrer' class="icon-button" data-toggle="tooltip" title="WhatsApp"><i class="fa-brands fa-whatsapp fa"></i></a>
+                                <a href="./assets/JV Faeldon.pdf" class="icon-button" download data-toggle="tooltip" title="Download CV"><i class="fa-solid fa-download fa"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>

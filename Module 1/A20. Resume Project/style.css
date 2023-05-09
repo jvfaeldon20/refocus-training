@@ -12,6 +12,14 @@ body {
     background-color: #4c4c4c;
 }
 
+.card {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.fa-solid{
+    margin-right: 0.5rem;
+}
+
 /* MAIN CSS */
 .main-container{
     background-image: url(assets/img/background-cover.jpg);
@@ -56,11 +64,13 @@ body {
     transform: rotate(-2deg);
 }
 
-.main-container > h3 > .role-description {
-    font-family: "Space Mono", Arial, serif;
+.main-container > h3 > label {
+    font-family: "Space Mono", Arial, serif !important;
     transform: rotate(2deg);
     font-size: 25px;
-    padding-top: 20px;
+    padding-top: 40px;
+    display: grid;
+    margin: 0px auto;
 }
 
 .main-container > .social-media {
@@ -70,14 +80,14 @@ body {
     top: 23%;
     display: grid;
     justify-content: center;
-    margin: 0px auto;
+    margin: 0px 20px;
 }
 
 .main-container > .social-media > ul > li, a {
     list-style-type: disc;
     display: inline-block;
     color: #fff;
-    padding: 0 5px;
+    padding: 0;
 }
 
 .main-container > .social-media > ul > li > a:hover {
@@ -104,311 +114,305 @@ body {
 }
 
 
-
-
-/* ABOUT ME */
-.header {
-  padding: 10px 16px;
-  background: #555;
-  color: #f1f1f1;
-}
-
-/* Page content */
-.content {
-  padding: 16px;
-}
-
-/* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 150;
-  width: 100%
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 102px;
-}
-
-/* PROFILE CSS */
-.about-container {
-    top: 200;
-    position:sticky;
-    height: 30vh;
-}
-
-.about-container > .social-media {
-    position: relative;
-    color: #fff;
-    font-size: 40px;
-    top: 23%;
-    display: grid;
-    justify-content: center;
-    margin: 0px auto;
-}
-
-.about-container > .social-media > ul > li, a {
-    list-style-type: disc;
-    display: inline-block;
-    color: #fff;
-    padding: 5px 5px 10px 5px;
-    margin-left: 20px;
-}
-
-.about-container > .social-media > ul > li > a:hover {
-    color: #8ebd24;
-    transition: 0.3s;
-}
-
-.nav-container {
+/* NAVIGATION */
+.navigation-header {
+    padding: 10px 16px;
     background-color: rgba(17, 70, 107);
     color: #fff;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
 }
 
-.nav-container__brand > h2 {
-    font-size: 30px;
-}
-
-.nav-container__header-logo {
-    height: 100px;
-}
-
-.nav-container__menu {
-    display: flex;
-    color: #fff;
-}
-
-.nav-container__menu > ul >li {
+.navigation-header > ul > li, a {
     list-style-type: none;
     display: inline-block;
-    margin-left: 27px;
-    padding: 10px 20px 0px 0px;
-}
-
-.nav-container__menu > ul > li > a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.nav-container__menu > ul > li > a:hover {
-    color: #a5d732;
-}
-
-.card {
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-}
-
-.navigation-header {
-    display: grid;
-    margin: 0px auto;
-    padding: 20px;;
-    background-color: rgba(17, 70, 107);
-}
-
-.navigation-header > ul > li {
-    list-style-type: disc;
-    display: inline-block;
-}
-
-.navigation-header > ul > li > a {
+    margin: 0 15px;
     text-decoration: none;
 }
 
 .navigation-header > ul > li > a:hover {
-    border-bottom: 3px solid #8ebd24;
-    color: #fff;
+    color: #8ebd24;
 }
 
 
-.profile-headercard {
-    border-top: 10px solid #8ebd24;
-    background-color: rgba(17, 70, 107);
-    padding: 20px;
-    position: relative;
-    height: 18vh;
-    margin: 0px auto;
+
+/* ABOUT ME */
+.content {
+    height: 120vh;
+    background-color: #fff;
     display: grid;
-    grid-template-columns: 15% 85%;
+    grid-template-rows: 10% 90%;
+    padding-top: 100px;
+    margin: 0 auto;
 }
 
-.profile-avatar {
-    position: relative;
-    background-size: cover;
-    background-image: url(assets/img/profile-thumb.png);
-    border: 5px solid #f5f5f5;
-    height: 150px;
+.content-header > .header-title {
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 30px;
+    border-bottom: 2px solid #8ebd24;
     width: 150px;
-    border-radius: 50%;
 }
 
-.profile-data__avatar {
-    position: relative;
-    background-size: cover;
-    background-image: url(assets/img/profile-thumb.png);
-    height: 50;
-    width: 59;
-    margin-right: 20px;
+.content-body > .about-img{
+    display: grid;
+    height: 170px;
+    justify-content: center;
+    margin: 0 auto;
 }
 
-.profile-header-text > .name{
+.content-body > .about-description{
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: justify;
+    padding: 0 215px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0 250px;
     text-align: center;
-    font-size: 35px;
-    color: #fff;
+    height: 75vh;
 }
 
-.profile-header-text > .sub-name {
-    margin: -10px auto;
-    font-size: 25px;
-    font-weight: 250;
-    color: #e5e5e5;
+.skills > .skills-category {
+    margin: 30px;
+    background-color: #8ebd24;
+    padding: 30px;
 }
 
-.profile-header-text > .contact-info {
-    padding-top: 15px;
-    color: #fff;
+.skills > .skills-category > h2 {
+    padding: 5px;
 }
 
-.profile-header-text > .mail {
-    color: #fff;
-    margin-top: -10px;
-}
-
-.profile-header-text > ul > li  {
-    font-size: 15px;
+.skills-category > ul > li{
     list-style-type: none;
-    display: inline-block;
-    padding: 15px 20px 0px 0px;
 }
 
-.profile-header-text > ul > li > i {
-    margin-right: 5px;
+/* SLIDE CSS */
+.swiper {
+    width: 1020px;
+    height: 600px;
+    z-index: -100;
 }
 
-.text-black {
+.swiper-wrapper {
+    text-align: center;
+}
+
+.swiper-title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 200;
+    padding: 20px;
+}
+
+.swiper-slide{
+    background-color: #8ebd24;
+}
+
+.timeline > ul > li {
+    list-style-type: none;
+}
+
+.timeline >  span  {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1;
+    font-weight: 200;
+    color: black;
+    top: 0%;
+    margin: 0 auto;
+    justify-content: center;
+    transform: rotate(0deg);
+    font-size: 18px;
+    text-align: justify;
+    padding: 0 100px;
+}
+
+.timeline > ul> .animate-box{
+    margin-bottom: 30px;
+}
+
+.timeline > ul {
+    padding: 0 250px;
+    text-align: center;
+}
+
+.company{
+    font-size: 20px;
+    font-weight: 200;
+    padding: 10px;
+    font-family: sans-serif;
+    transform: rotate(0deg);
     color: black;
 }
 
-.personal-data > .info > li {
-    text-decoration: none;
+.timeline-body{
+    font-size: 20px;
 }
 
-.profile-card {
-    padding: 20px;
-    position: relative;
-    background-color: #fff;
-    height: 65vh;
-    margin: 10px auto;
-    display: grid;
-    grid-template-columns: 1fr;
+.timeline-title {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 20px 20px 20px;
+    width: 300px;
+    color: rgba(22, 99, 153);
+    border-bottom: 2px solid #8ebd24;
+    transform: rotate(0deg);
+    font-family: sans-serif;
     text-align: center;
 }
 
-.skill-card {
-    padding: 20px;
-    position: relative;
-    background-color: #fff;
-    height: 65vh;
-    margin: 10px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+span > .timeline {
+    font-weight: 200;
+    color: black;
 }
 
-.project-card {
-    padding: 20px;
-    position: relative;
-    background-color: #fff;
-    height: 65vh;
-    margin: 10px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.fa {
+    margin-right: 0rem;
+}
+.icon-button{
+    padding: 20px 25px;
+    background-color: rgba(22, 99, 153);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 25px;
 }
 
-.experience-card {
-    padding: 20px;
-    position: relative;
-    background-color: #fff;
-    height: 65vh;
-    margin: 10px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.icon-button:hover{
+    color: #8ebd24;
 }
 
-.overlay{
-    background-color: rgba(22, 99, 153, 0.9);
+.btn-cv{
+    padding: 20px 30px;
+    background-color: rgba(22, 99, 153);
+    color: #fff;
 }
 
-.profile-data {
-    padding: 0 250px;
-    margin-top: 50px;
-}
-
-.header-title {
-    font-size: 30px;
-}
-
-.content {
-    font-size: 15pxs;
-}
-
-.spacer{
-    height: 2px;
-    background-color: #8ebd24;
-    width: 200px;
-    display: grid;
-    margin: 5px auto;
-}
-
-.about-me {margin-top: 20px;
-    height: 20%;
-    width: auto;
-}
 
 
 /* large devices */
 @media only screen and (min-width: 769px) {
-    .profile-headercard, .navigation-header {
+    .content {
         width: 1280px;
     }
-
-    .profile-card, .skill-card, .project-card, .experience-card {
-        width: 1280px;
-    }
-
-    .nav-container__header-text {
-        display: block;
-    }
+    
 }
 
 /* medium devices */
 @media only screen and (min-width: 321px) and (max-width: 768px) {
-    .nav-container__header-text {
-        display: none;
+    .nav-links > li > a > .link-name {
+        display: none !important;
     }
 
-    .nav-container__menu > ul >li { 
-        margin-left: 0px;
-        padding: 10px 20px 0px 0px;
-        font-size: 15px;
+    .content-body > .about-img{
+        display: grid;
+        height: 80px;
+        justify-content: center;
+        margin: 0 auto;
     }
 
-    .profile-avatar {
-        display: none;
+    .content-body > .about-description{
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: justify;
+        padding: 0 100px;
     }
 
-    .profile-headercard {
+    
+    .skills {
+        display: grid;
         grid-template-columns: 1fr;
+        grid-row: 1fr;
+        margin: 0;
         text-align: center;
+        height: 75vh;
+    }
+
+    .skills > .skills-category {
+        margin: 0 30px;
+        background-color: #8ebd24;
+        padding: 30px;
+    }
+
+    .timeline {
+        padding: 0 20px;
+    }
+    
+    /* .timeline > h1, h3,  span  {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1;
+        font-weight: 200;
+        color: black;
+        top: 0%;
+        margin: 0 auto;
+        justify-content: center;
+        transform: rotate(0deg);
+        font-size: 15px;
+        text-align: justify;
+        padding: 0 100px;
+    } */
+
+    .timeline > ul> .animate-box{
+        margin-bottom: 20px;
+    }
+
+    .timeline > ul {
+        padding: 30px;
+        text-align: justify;
+    }
+
+    .company{
+        font-size: 20px;
+        font-weight: 200;
+        padding: 10px;
+        font-family: sans-serif;
+        transform: rotate(0deg);
+        color: black;
+    }
+
+    .timeline-body{
+        font-size: 16px;
+    }
+
+    .timeline-title {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 0 20px 20px 20px;
+        width: 300px;
+        color: rgba(22, 99, 153);
+        border-bottom: 2px solid #8ebd24;
+    }
+
+    span > .timeline {
+        font-weight: 200;
+        color: black;
+    }
+
+    .timeline-heading {
+        display: grid;
+        justify-content: center;
+        margin: 0px;
+    }
+
+    .icon-button{
+        margin: 5px;
+    }
+
+    .main-name {
+        font-size: 40px;
     }
 }
 
 
 /* small devices */
 @media only screen and (max-width: 320px){
-    /* HOMEPAGE */
+    /* MAIN */
     .main-container > .profile-thumb {
         height: 150px;
         width: 150px;
@@ -434,28 +438,14 @@ body {
      width: 150px;
     }
 
-    /* PROFILE NAVIGATION */
-    .nav-container__brand {
-        display: none;
+    .main-name {
+        font-size: 40px;
     }
 
-    .nav-container__menu > ul >li { 
-        margin-left: 0px;
-        padding: 10px 0px 0px 0px;
-        text-align: center;
-        font-size: 5px;
-    }
 
-    .nav-container__header-text {
-        display: none;
-    }
-
-    .profile-avatar {
-        display: none;
-    }
-
-    .profile-header-card {
-        text-align: center;
+    /* NAVIGATION */
+    .nav-links > li > a >.link-name {
+        display: none !important;
     }
 }
 
