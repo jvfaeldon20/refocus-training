@@ -36,4 +36,24 @@ Mutable - a type of variable that can be changed without creating an entirely ne
 ------------------------------------------------
 
 
+Function - a block of code that usually executes a task or some calculation. it accepts arguments as inputs in the parenthesis
+and returns an output
 
+
+function - keyword use to declare a function
+return - keyword use to get get function output
+local - variables are declared inside the function and can only be access inside the functions code block
+conditional statement - not necessary to declare in a function
+
+
+
+STRING METHODS
+1. slice
+var status = "world"
+status.slice(1) = "w"
+
+
+JavaScript methods - are predefined actions that can be called from an object to perform a task
+arr.length = returns the number of chars in a string
+arr.slice(0,5) = extracts a part of a string and return the string from p1(start index) - p2(end index)
+arr.substring(0,3) = 
