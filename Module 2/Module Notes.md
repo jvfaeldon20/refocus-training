@@ -57,3 +57,19 @@ JavaScript methods - are predefined actions that can be called from an object to
 arr.length = returns the number of chars in a string
 arr.slice(0,5) = extracts a part of a string and return the string from p1(start index) - p2(end index)
 arr.substring(0,3) = 
+
+
+
+
+closures
+- a function inside a another function
+- helps us prevent unwanted user actions
+
+callbacks
+- functions that are passed as an argument to another function
+
+
+memory lifecycle
+1 - javascript allocates the memory that you need
+2 - you used the allocated memory
+  
