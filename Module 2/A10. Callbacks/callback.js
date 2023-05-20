@@ -8,7 +8,7 @@ function discount(percentage=0, amount=0){
 
 // Task 2: Check the age
 function age_checker(age){
-    return age >= 10 ? true: false 
+    return age >= 10 
 }
 
 

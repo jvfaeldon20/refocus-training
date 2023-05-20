@@ -73,3 +73,33 @@ memory lifecycle
 1 - javascript allocates the memory that you need
 2 - you used the allocated memory
   
+
+recursion
+- built with 2 parts(base and recursive call)
+
+
+debugging codes
+a. reproduce the bug
+b. take time to analyze 
+
+types of errors
+1. syntax - happens when you have wrong syntax
+2. runtime - occurs when you forgot to install certain package or dependencies
+3. logic - getting undesired output
+
+devtool - provides big role to debug your code
+parts of devtool
+1. console - loggers
+2. code editor - able to open files and see where the error is located
+3. file navigator - able to see the file that has been runnnig or open
+4. debugging pane - where breakpoints is located
+
+
+Preprocessors = are like scripts that help you write css files
+Compiler = translate preprocessor SASS language into CSS
+
+
+Different preprocessors
+1. Sass
+2. LESS
+3. stylus
