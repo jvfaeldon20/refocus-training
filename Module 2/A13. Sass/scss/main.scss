@@ -1,0 +1,80 @@
+@use "colors";
+@use "variables";
+@use "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  gap: 50px;
+  place-items: center;
+}
+
+.triangle-left {
+  @include mixins.shape-size();
+  border-top: variables.$shape-side-length transparent;
+  border-bottom: variables.$shape-side-length transparent;
+  border-right: variables.$shape-side-length colors.$primary-color;
+}
+
+.triangle-up {
+  @include mixins.shape-size();
+  border-left: variables.$shape-side-length transparent;
+  border-right: variables.$shape-side-length transparent;
+  border-bottom: variables.$shape-side-length colors.$warning-color;
+}
+
+.triangle-down {
+  @include mixins.shape-size();
+  border-left: variables.$shape-side-length transparent;
+  border-right: variables.$shape-side-length transparent;
+  border-top: variables.$shape-side-length colors.$danger-color;
+}
+
+.triangle-right {
+  @include mixins.shape-size();
+  border-top: variables.$shape-side-length transparent;
+  border-bottom: variables.$shape-side-length transparent;
+  border-left: variables.$shape-side-length colors.$success-color;
+}
+
+.ellipse-horizontal {
+  @include mixins.shape-size($width: 180px, $height: 90px);
+  border-radius: 50%;
+}
+
+.ellipse-vertical {
+  @include mixins.shape-size($width: 90px, $height: 180px);
+  border-radius: 50%;
+}
+
+.rectangle-horizontal {
+  @include mixins.shape-size($width: 120px, $height: 80px);
+}
+
+.rectangle-vertical {
+  @include mixins.shape-size($width: 80px, $height: 120px);
+}
+
+.orange {
+  background-color: colors.$warning-color;
+}
+
+.red {
+  background-color: colors.$danger-color;
+}
+
+.green {
+  background-color: colors.$success-color;
+}
+
+.blue {
+  background-color: colors.$primary-color;
+}
