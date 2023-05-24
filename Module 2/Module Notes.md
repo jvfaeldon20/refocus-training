@@ -100,6 +100,34 @@ Compiler = translate preprocessor SASS language into CSS
 
 
 Different preprocessors
-1. Sass
+1. Sass (variables, css rules using nesting, mixins, modules)
 2. LESS
 3. stylus
+
+
+DOM 
+- a remote controller that fetch, update and create elements document in an element
+- it is the way to interact with the user the web page which allows your app to be dynamic
+- using dom you can minipulate elements using its attributes
+
+DOM elements can be selected by:
+1. tags - div, span, section
+2. id selectors - 
+3. class selectors
+4. attributes - <input type="text">
+
+LEARNINGS
+- select elements, query selectors, dom manipulation
+
+DOM EVENTS
+- are signals that some user actions happened
+- triggers javascript functions through handlers
+
+FORMS
+- use to collect data
+- use to gather search criteria  from a user
+- to transmit data to a server for processing
+
+FORM 
+- form validation
+- form methods

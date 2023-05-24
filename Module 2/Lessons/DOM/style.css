@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin: 20px;
+    padding: 20px;
+    height: 250px;
+    width: 300px;
+    border: 2px solid gray;
+}
+
+.form-control {
+    padding: 10px;
+    margin-bottom:2px ;
+}
+
+.input-block{
+    width: 185px;
+}
+
+.btn{
+    height: 39px;
+    width: 41px;
+}
+
+.btn-add{
+    width: 94%;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form name="signup" method="POST">
+        <div id="error-first_name" class="error"></div>
+        <div class="form-control">
+            <input name="first_name" placeholder="first_name" />
+        </div>
+        <div class="form-control">
+            <input type="submit" name="btnSubmit" />
+            <input type="reset" name="btnReset" />
+        </div>
+    </form>
+
+<script>
+    
+    const form = document.forms.signup;
+    const first_name = form.first_name;
+    
+    form.addEventListener('submit', function(event){
+        event.preventDefault();
+        if(!first_name.value){
+            setError(first_name, 'First name is required!');
+            return;
+        }
+    })
+
+    
+    function setError(field, errorMsg){
+        field.style.borderColor = 'red';
+        document.getElementById('error-' + field.name).innerText = errorMsg
+    }
+</script>
+</body>
+</html>

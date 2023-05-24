@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #fefefe;
+    font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body > h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-content: left;
+    width: 100vw;
+    text-align: left;
+}
+
+.container > .record {
+    margin: 0 0 0 30%;
+}
+
+.container > .result {
+    margin: 0 30% 0 0;
+    background-color: #f5f5f5;
+}
+
+.header{
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.personal-info {
+    display: flexbox;
+    flex-direction: column;
+}
+
+.personal-info > div > .form-label {
+    min-width: 150px;
+    display: inline-block;
+    text-align: left;
+}
+
+.personal-info > div > .form-input{
+    height: 25px;
+    width: 250px;
+    padding: 5px;
+    margin: 2px 0;
+}
+
+.personal-info > div > #region, #vaccination_brand{
+    height: 45px;
+    width: 265px;
+    border: 2px solid;
+    margin: 2px 0;
+}
+
+.personal-info > .form-group-gender{
+    text-align: justify;
+    padding: 10px 0;
+}
+
+.vaccination-info > div {
+    margin: 20px 0;
+}
+
+.vaccination-info > div > .form-control > .form-label {
+    min-width: 150px;
+    display: inline-block;
+    text-align: left;
+}
+
+.vaccination-info > div > .form-control > .form-input{
+    height: 25px;
+    width: 250px;
+    padding: 5px;
+    margin: 2px 0;
+}
+
+.vaccination-info > div > .form-control > #region, #vaccination_brand{
+    height: 45px;
+    width: 265px;
+    border: 2px solid;
+    margin: 2px 0;
+}
+
+.vaccination-info > .form-group-gender{
+    text-align: justify;
+    padding: 10px 0;
+}
+
+.vaccination-info > .second-dosage{
+    display: none;
+}
+
+.submit {
+    padding: 10px 30px;
+    background-color: mediumseagreen;
+    color: #fff;
+}
+
+.submit:hover{
+    background-color: mediumaquamarine;
+}
+
+.container > .result > .data {
+    margin: 0 20px;
+}
+
+.data > div > .form-output{
+    margin: 0 20px;
+    display: block;
+    padding: 5px;
+}
+
+.data > div > .output-header{
+    display: none;
+}
+
+.data > div > .form-output > .vax2-item{
+    display: block;
+    padding: 5px;
+}
+

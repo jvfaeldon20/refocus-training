@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <input class="form-control" type="text" id="counter">
+        <button class="btn" id="plus">+</button>
+        <button class="btn" id="minus">-</button>
+        <button class="btn btn-add" id="addToCart">ADD TO CART</button>
+    </div>
+
+<script>
+    const inputCounter = document.getElementById('counter');
+    const btnPlus = document.getElementById('plus')
+    const btnMinus = document.getElementById('minus')
+    const btnAddToCart = document.getElementById('addToCart')
+
+    // option 1: using onclick()
+    function plus(){
+        if(+inputCounter.value >= 0 ){
+            inputCounter.value = +inputCounter.value + 1
+        }else{
+            inputCounter.value = 0
+        }
+    }
+
+    // option 2: using dom events
+    btnPlus.addEventListener('click', plus)
+    btnMinus.addEventListener('click', function(){
+        if(+inputCounter.value > 0 ){
+            inputCounter.value = +inputCounter.value - 1
+        }else{
+            inputCounter.value = 0
+        }
+    })
+
+    btnAddToCart.addEventListener('click', function(){
+        if(+inputCounter.value){
+            alert(`Successfully added to cart ${inputCounter.value} product`)
+        }else{
+            alert(`There is no product added`)
+        }
+    })
+
+</script>
+</body>
+</html>

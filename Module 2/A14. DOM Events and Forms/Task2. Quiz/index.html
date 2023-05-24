@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <form name="quiz" method="POST">
+        <div class="quiz-container">
+            <h1>Quiz Game</h1>
+            <section id="score"></section>
+            <section class="question" id="question1">
+                <span><strong>Question 1:</strong> What is the capital of the Philippines?</span><br>
+                <label>Your answer:</label><input class="form-control" type="text" name="answer1" value="">
+            </section>
+            <section class="question" id="question2">
+                <span><strong>Question 2:</strong> What is the value of x in this equation: x = 3 + 2×5?</span><br>
+                <label>Your answer:</label>
+                <div class="form-group">
+                    <span>
+                        <input class="form-radio" type="radio" name="answer2" value="25">
+                        <label>25</label>
+                    </span>
+                    <span>
+                        <input class="form-radio" type="radio" name="answer2" value="13">
+                        <label>13</label>
+                    </span>
+                    <span>
+                        <input class="form-radio" type="radio" name="answer2" value="18">
+                        <label>18</label>
+                    </span>
+                    <span>
+                        <input class="form-radio" type="radio" name="answer2" value="30">
+                        <label>30</label>
+                    </span>
+                </div>
+            </section>
+            <section class="question" id="question3">
+                <span><strong>Question 3:</strong> Which of the following birds can fly? Choose 3 correct answers.</span><br>
+                <label>Your answer:</label>
+                <div class="form-group">
+                    <span>
+                        <input class="form-checkbox" type="checkbox" name="answer3[]" value="parrot">
+                        <label>Parrot</label>
+                    </span>
+                    <span>
+                        <input class="form-checkbox" type="checkbox" name="answer3[]" value="eagle">
+                        <label>Eagle</label>
+                    </span>
+                    <span>
+                        <input class="form-checkbox" type="checkbox" name="answer3[]" value="penguin">
+                        <label>Penguin</label>
+                    </span>
+                    <span>
+                        <input class="form-checkbox" type="checkbox" name="answer3[]" value="crow">
+                        <label>Crow</label>
+                    </span>
+                </div>
+            </section>
+            <input type="submit" value="SUBMIT" class="btn-submit">
+        </div>
+    </form>
+<script>
+    const form  = document.forms.quiz;
+    const ans1  = form.answer1;
+    const ans2  = form.answer2;
+
+    // FORM VALIDATION
+    form.addEventListener('submit', function(event){
+            event.preventDefault();
+            if(!checkInput(ans1) || !checkInput(ans2) || !checkCheckboxes()){
+                alert("Please answer all questions to proceed!")
+            }else{
+                let data = checkAnswer();
+                let score = data.Q1(ans1.value) + data.Q2(ans2.value) + data.Q3()
+                document.getElementById('score').innerHTML = `<h1>Your score: <strong>${score}/3</strong></h1>`                
+            }
+    })
+
+    function checkInput(field){
+        let isValid = true
+        if(!field.value){
+            isValid = false
+        }
+        return isValid;
+    }
+
+    function checkCheckboxes(){
+        let checks = document.querySelectorAll('input[type="checkbox"]:checked')
+        let isValid = false
+        
+        if(checks.length > 0){
+            isValid = true
+        }
+
+        return isValid
+    }
+
+    function checkAnswer(){
+        let score = 0
+        let message = ""
+        let question1 = document.getElementById('question1')
+        let question2 = document.getElementById('question2')
+        let question3 = document.getElementById('question3')
+
+        function Q1(ans1){
+            score = 0
+            question1.style.backgroundColor = 'lightcoral'
+            if(ans1.toLowerCase() == 'manila'){
+                score += 1
+                question1.style.backgroundColor = 'lightgreen'
+            }
+
+            return score
+        }
+
+        function Q2(ans2){
+            score = 0
+            question2.style.backgroundColor = 'lightcoral'
+            if(ans2.toLowerCase() == 13){
+                score += 1
+                question2.style.backgroundColor = 'lightgreen'
+            }
+            
+            return score
+        }
+
+        function Q3(){
+            score = 0
+            let ans3 = 0
+            let checks = document.querySelectorAll('input[type="checkbox"]:checked')
+            for(let i in checks){
+                if(checks[i].value == 'parrot'){
+                    ans3 += 1
+                }
+                
+                if(checks[i].value == 'eagle'){
+                    ans3 += 1
+                }
+                
+                if(checks[i].value == 'crow'){
+                    ans3 += 1
+                }
+            }
+            
+            score = 0
+            question3.style.backgroundColor = 'lightcoral'
+            if(ans3 == 3) {
+                score = 1
+                question3.style.backgroundColor = 'lightgreen'
+            }
+            return score
+        }
+
+        return { Q1, Q2, Q3}
+    }
+</script>
+</body>
+</html>

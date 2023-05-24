@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Headline</h1>
+    <div id="container">
+        <div class="data">First Data</div>
+        <div class="data">Second Data</div>
+        <div class="data">Third Data</div>
+    </div>
+    <h1>Another Heading</h1>
+<script>
+    // APPLIES TO 1ST MATCHED SELECTOR
+    // const heading = document.querySelector('h1')
+    // heading.innerText = "New Heading" // interpreted as text
+    // const container = document.getElementById('container')
+    // container.innerHTML = "<div>New Data</div>" // interpreted as html
+
+    // APPLIES TO ALL MATCHED SELECTORS
+    // const data = document.querySelectorAll('h1')
+    // for(let i=0; i<data.length; i++){
+    //     data[i].innerText = "Uniform Heading"
+    // }
+        
+    // LOOP
+    // const data = document.getElementsByTagName('h1')
+    // for(let i=0; i<data.length; i++){
+    //     data[i].innerText = "Heading 2"
+    // }
+
+    // DYANAMIC OBJECT STYLE
+    // const data = document.querySelectorAll('div.data')
+    // const colorMap = {
+    //     0: 'red', 1:'blue', 2:'green'
+    // }
+    // for(let i=0; i<data.length; i++){
+    //     data[i].style.color = colorMap[i];
+    // }
+
+    // ADDING NEW ELEMENT
+    // const newDiv = document.createElement('div')
+    // newDiv.innerText = 'New div element'
+    // newDiv.style.color = 'orange'
+    // const targetDiv = document.getElementById('container')
+    // targetDiv.appendChild(newDiv)
+
+    // REMOVING CHILD ELEMENT
+    const secondChild = document.querySelector('div.data:nth-child(2)');
+    const parent = document.querySelector('div#container');
+    parent.removeChild(secondChild)
+</script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>REGISTRATION FORM</h1>
+    <div class="container">
+            <form name="register" method="POST" class="record">
+                <div>
+                    <section class="header">
+                        <h2>PERSONAL INFORMATION</h2>
+                    </section>
+                    <section class="personal-info">
+                        <div class="form-control">
+                            <label class="form-label">First Name</label>
+                            <input name="first_name" class="form-input"/>
+                        </div>
+                        <div class="form-control">
+                            <label class="form-label">Middle Name</label>
+                            <input name="middle_name" class="form-input"/>
+                        </div>
+                        <div class="form-control">
+                            <label class="form-label">Last Name</label>
+                            <input name="last_name" class="form-input"/>
+                        </div>
+                        <div class="form-control">
+                            <label class="form-label">Birthday</label>
+                            <input type="date" name="birthday" class="form-input">
+                        </div>
+                        <div class="form-control">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" name="email_address" class="form-input"/>
+                        </div>
+                        <div class="form-control">
+                            <label class="form-label">Region</label>
+                            <select name="region" id="region" class="form-input"></select>
+                        </div>
+                        <div class="form-control">
+                            <label class="form-label">Province</label>
+                            <input name="province" class="form-input"/>
+                        </div>
+                        <div class="form-control">
+                            <label class="form-label">Barangay</label>
+                            <input name="barangay" class="form-input"/>
+                        </div>
+                        <div class="form-control">
+                            <label class="form-label">Street</label>
+                            <input name="street" class="form-input"/>
+                        </div>
+                        <div class="form-control form-group-gender">
+                            <label class="form-label">Gender</label>
+                            <span>
+                                <label for="">Male</label>
+                                <input type="radio" name="gender" value="male" />
+                                <label for="">Female</label>
+                                <input type="radio" name="gender" value="male" />
+                            </span>
+                        </div>
+                    </section>
+            </form>
+            <section class="header">
+                <h2>VACCINATION INFORMATION</h2>
+            </section>
+            <section class="vaccination-info">
+                <div class="first-dosage">
+                    <h3>1st DOSAGE</h3>
+                    <div class="form-control">
+                        <label class="form-label">Vaccination Brand</label>
+                        <select name="vaccination_brand_d1" id="vaccination_brand" class="form-input vaccination_brand"></select>
+                    </div>
+                    <div class="form-control">
+                        <label class="form-label">Vaccination Date</label>
+                        <input type="date" name="vaccination_date_d1" class="form-input">
+                    </div>
+                    <div class="form-control">
+                        <label class="form-label">Vaccination Site</label>
+                        <input name="vaccination_site_d1" class="form-input"/>
+                    </div>
+                    <div class="form-control form-group-gender">
+                        <label class="form-label">Got 2nd Vaccination?</label>
+                        <span>
+                            <label for="">Yes</label>
+                            <input type="radio" name="with2ndVaccine" id="withVax2" value="yes" />
+                            <label for="">No</label>
+                            <input type="radio" name="with2ndVaccine" id="withoutVax2" value="no" />
+                        </span>
+                    </div>
+                </div>
+                <div class="second-dosage">
+                    <h3>2nd DOSAGE</h3>
+                    <div class="form-control">
+                        <label class="form-label">Vaccination Brand</label>
+                        <select name="vaccination_brand_d2" id="vaccination_brand" class="form-input vaccination_brand2"></select>
+                    </div>
+                    <div class="form-control">
+                        <label class="form-label">Vaccination Date</label>
+                        <input type="date" name="vaccination_date_d2" class="form-input">
+                    </div>
+                    <div class="form-control">
+                        <label class="form-label">Vaccination Site</label>
+                        <input name="vaccination_site_d2" class="form-input"/>
+                    </div>
+                </div>
+                <input type="submit" class="submit" value="SUBMIT">
+            </section>
+        </div>
+        <div class="result">
+            <section class="header">
+                <h2>RESULT</h2>
+            </section>
+            <section class="data">
+                <div class="output-personal-info">
+                    <h3 class="form-output output-header">PERSONAL INFORMATION</h3>
+                    <label class="form-output" id="outputFirstName"></label>
+                    <label class="form-output" id="outputMiddleName"></label>
+                    <label class="form-output" id="outputLastName"></label>
+                    <label class="form-output" id="outputBirthday"></label>
+                    <label class="form-output" id="outputEmailAddress"></label>
+                    <label class="form-output" id="outputRegion"></label>
+                    <label class="form-output" id="outputProvince"></label>
+                    <label class="form-output" id="outputBarangay"></label>
+                    <label class="form-output" id="outputStreet"></label>
+                    <label class="form-output" id="outputGender"></label>
+                </div><br>
+                <div class="output-vaccination-info">
+                    <h3 class="form-output output-header">VACCINATION INFORMATION</h3>
+                    <h5 class="form-output output-header">DOSAGE 1</h5>
+                    <label class="form-output" id="outputVaccinationBrand"></label>
+                    <label class="form-output" id="outputVaccinationDate"></label>
+                    <label class="form-output" id="outputVaccinationSite"></label><br>
+                    
+                    <h5 class="form-output output-header">DOSAGE 2</h5>
+                    <div class="form-output" id="output-vax-2"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        const form = document.forms.register;
+        
+        // PERSONAL INFO
+        const first_name = form.first_name;
+        const middle_name = form.middle_name
+        const last_name = form.last_name
+        const birthday = form.birthday
+        const email_address = form.email_address
+        const region = form.region
+        const province = form.province
+        const barangay = form.barangay
+        const street = form.street
+        const gender = form.gender
+
+        // VACCINATION INFO
+        const vaccination_brand_d1 = form.vaccination_brand_d1
+        const vaccination_date_d1 = form.vaccination_date_d1
+        const vaccination_site_d1 = form.vaccination_site_d1
+        const with2ndVaccine = form.with2ndVaccine
+        const vaccination_brand_d2 = form.vaccination_brand_d2
+        const vaccination_date_d2 = form.vaccination_date_d2
+        const vaccination_site_d2 = form.vaccination_site_d2
+
+        // FORM VALIDATION
+        form.addEventListener('submit', function(event){
+            event.preventDefault();
+            if(!checkInput(first_name) || !checkInput(last_name) || !checkInput(birthday)){
+                alert("Please fillup required fields first!")
+            }else{
+                // personal info
+                document.querySelector('#outputFirstName').innerHTML = `First Name: <b>${first_name.value}</b>`
+                document.querySelector('#outputMiddleName').innerHTML = `Middle Name: <b>${middle_name.value}</b>`
+                document.querySelector('#outputLastName').innerHTML = `Last Name: <b>${last_name.value}</b>`
+                document.querySelector('#outputBirthday').innerHTML = `Birthday: <b>${birthday.value}</b>`
+                document.querySelector('#outputEmailAddress').innerHTML = `Email Address: <b>${email_address.value}</b>`
+                document.querySelector('#outputRegion').innerHTML = `Region: <b>${region.value}</b>`
+                document.querySelector('#outputProvince').innerHTML = `Province: <b>${province.value}</b>`
+                document.querySelector('#outputBarangay').innerHTML = `Barangay: <b>${barangay.value}</b>`
+                document.querySelector('#outputStreet').innerHTML = `Street: <b>${street.value}</b>`
+                document.querySelector('#outputGender').innerHTML = `Gender: <b>${gender.value}</b>`
+
+                // vaccination info (dose 1)
+                document.querySelector('#outputVaccinationBrand').innerHTML = `Vaccination Brand: <b>${vaccination_brand_d1.value}</b>`
+                document.querySelector('#outputVaccinationDate').innerHTML = `Vaccination Date: <b>${vaccination_date_d1.value}</b>`
+                document.querySelector('#outputVaccinationSite').innerHTML = `Vaccination Site: <b>${vaccination_site_d1.value}</b>`
+
+                // vaccination info (dose 2)
+                const vax2 = document.getElementById('output-vax-2')
+                if(with2ndVaccine.value == 'yes'){
+                    let option = `
+                        <label class="vax2-item">Vaccination Brand: <b>${vaccination_brand_d2.value}</b></label>
+                        <label class="vax2-item">Vaccination Date: <b>${vaccination_date_d2.value}</b></label>
+                        <label class="vax2-item">Vaccination Site: <b>${vaccination_site_d2.value}</b></label>
+                    `
+                    vax2.innerHTML = option
+                }else{
+                    let option = `<label class="vax2-item"><b>Not yet vaccinated</b></label><br>`
+                    vax2.innerHTML = option
+                }
+
+                // header title
+                const headers = document.querySelectorAll('.output-header');
+                for(let i in headers){
+                    headers[i].style.display = "block";
+                }
+            }
+             
+        })
+        
+        function checkInput(field){
+            let isValid = true
+            
+            field.style.borderColor = 'black';
+            if(!field.value){
+                field.style.borderColor = 'red';
+                isValid = false
+            }
+            return isValid;
+        }
+
+        const regionDropDown = document.getElementById('region');
+        const regionData = [
+            "",
+            "Region I Ilocos Region",
+            "Region II Cagayan Valley",
+            "Region III Central Luzon",
+            "Region IV A CALABARZON",
+            "MIMAROPA Region",
+            "Region V Bicol Region",
+            "Region VI Western Visayas",
+            "Region VII Central Visayas",
+            "Region VIII Eastern Visayas",
+            "Region IX Zamboanga Peninsula",
+            "Region X Northern Mindanao",
+            "Region XI Davao Region",
+            "Region XII SOCCSKSARGEN",
+            "Region XIII Caraga",
+            "NCR National Capital Region",
+            "CAR Cordillera Administrative Region",
+            "BARMM Bangsamoro Autonomous Region in Muslim Mindanao",
+        ]
+
+        for(let key in regionData){
+            let option = document.createElement("option")
+            let optionText = document.createTextNode(regionData[key])
+            
+            // SET OPTION TEXT AND VALUE FOR REGION DROPDOWN
+            option.setAttribute('value', regionData[key])
+            option.appendChild(optionText)
+            regionDropDown.appendChild(option)
+        }
+
+        const vaccineData = [
+            "",
+            "Pfizer BioNTech",
+            "AstraZeneca",
+            "Coronavac",
+            "Sputnik V",
+            "Janssen",
+            "Covaxin",
+            "Moderna",
+            "Sinopharm",
+            "Covovax"
+        ]
+
+        for(let i in vaccineData){
+            let option = `<option value="${vaccineData[i]}">${vaccineData[i]}</option>`
+          
+            // SET OPTION TEXT AND VALUE FOR GENDER DROPDOWN
+            document.querySelector('.vaccination_brand').innerHTML += option
+            document.querySelector('.vaccination_brand2').innerHTML += option
+        }
+        
+
+        function checkSecondVax(){
+            const secondVaccineElement = document.querySelector('.second-dosage')
+            const withVax2 = document.querySelector('#withVax2')
+
+            if(withVax2.checked){
+                secondVaccineElement.style.display = 'block'
+            }else{
+                secondVaccineElement.style.display = 'none'
+            }
+        }
+
+        const SecondDose = document.querySelectorAll('input[name="with2ndVaccine"]');
+        SecondDose.forEach(radio => {
+            radio.addEventListener('click', checkSecondVax);
+        });
+
+        
+    </script>
+</body>
+</html>
