@@ -1,3 +1,6 @@
+@use "variables";
+@use "mixins";
+
 *{
     margin: 0;
     padding: 0;
@@ -13,22 +16,23 @@ body{
 
 header {
     height: 84px;
-    background-color: #192140;
+    background-color: variables.$primary-color;
     width: 100vw;
 }
 
 nav {
-    width: 1200px;
-    display: flex;
+    @include mixins.container-width();
+    // width: 1200px;
+    // margin: auto;
+    // display: flex;
     justify-content: space-between;
-    margin: auto;
     padding-top: 25px;
 }
 
 nav > .nav-logo > h1 {
-    font-weight: 700;
+    font-weight: variables.$font-weight-bold;
     margin-left: -10px;
-    color: #DCF10D;
+    color: variables.$secondary-color;
 }
 
 nav > .nav-link {
@@ -42,15 +46,15 @@ nav > .nav-link > ul {
 
 nav > .nav-link > ul > li, a {
     display: inline;
-    color: white;
+    color: variables.$white-color;
     text-decoration: none;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: variables.$font-weight-regular;
     padding: 0 2px;
 }
 
 nav > .nav-link > ul > li > .nav-link:hover{
-    color: #dcf10d;
+    color: variables.$secondary-color;
 }
 
 nav > .nav-toggle {
@@ -60,65 +64,70 @@ nav > .nav-toggle {
 }
 
 .btn-signup{
-    font-weight: bold;
-    color: #9D9DB5;
+    font-weight: variables.$font-weight-bold;
+    color: variables.$default-color;
     margin-left: 30px;
 }
 
 .btn-signup:hover{
-    color: #0266FF;
+    color: variables.$active-color;
 }
 
 .btn-login{
     display: inline-block;
     font-weight: semibold;
-    color: #9D9DB5;
-    border: 1px solid #9D9DB5;
+    color: variables.$default-color;
+    border: 1px solid variables.$default-color;
     border-radius: 20px;
     padding: 10px 15px;
 }
 
 .btn-login:hover {
-    border-color: #0266FF;
-    color: #0266FF;
+    border-color: variables.$active-color;
+    color: variables.$active-color;
 }
 
 .btn-toggle{
-    color: #0266FF;
-    border: 1px solid #0266FF;
+    color: variables.$active-color;
+    border: 1px solid variables.$active-color;
     border-radius: 50;
     padding: 10px 12px;
 }
 
 .read{
-    color: #192140;
+    color: variables.$primary-color;
 }
 
 .active {
-    color: #0266FF;
+    color: variables.$active-color;
 }
 
 .inactive {
-    color: #9D9DB5;
+    color: transparent;
 }
 
 main > .main-container {
-    display: grid;
+    @include mixins.container-width($display:grid);
     grid-template-columns: repeat(3, 1fr);
-    width: 1200px;
-    margin: auto;
+    // display: grid;
+    // width: 1200px;
+    // margin: auto;
 }
 
 main > .main-container > .card {
     margin: 3rem 0 6rem 0;
     height: 275px;
     width: 350px;
-    background-color: #f5f5f5;
+    background-color: variables.$light-gray-color;
     position: relative;
 }
 
 main > .main-container > .card:hover .overlay {
     opacity: 1;
+}
+
+main > .main-container > .card:hover .inactive{
+    color: variables.$primary-color;
 }
 
 main > .main-container > .card  > .img-size{
@@ -142,7 +151,7 @@ main > .main-container > .card > .card-item > .read-mark > i{
 
 main > .main-container > .card > .card-item > .card-header {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: variables.$font-weight-bold;
     display: block;
     min-width: 320px;
     min-height: 75px;
@@ -150,7 +159,7 @@ main > .main-container > .card > .card-item > .card-header {
 
 main > .main-container > .card > .card-item > hr {
     margin: 15px 0;
-    color: #9D9DB5;
+    color: variables.$default-color;
 }
 
 main > .main-container > .card > .card-item > .card-footer > ul {
@@ -161,16 +170,16 @@ main > .main-container > .card > .card-item > .card-footer > ul {
 
 main > .main-container > .card > .card-item > .card-footer > ul > li, li > a{
     padding: 10px;
-    color: #9D9DB5;
+    color: variables.$default-color;
     background-color: transparent;
 }
 
 main > .main-container > .card > .card-item > .card-footer > ul > li > a:hover{
-    color: #0266FF;
+    color: variables.$active-color;
 }
 
 main > .main-container > .card > .card-item > .card-footer > ul > .publish-date {
-    border: 1px solid #9D9DB5;
+    border: 1px solid variables.$default-color;
     border-radius: 20px;
     font-size: 15px;
 }
@@ -207,7 +216,7 @@ footer > .footer-container > .footer-blog > ul {
 
 footer > .footer-container > .footer-blog > ul > li, a {
     display: inline;
-    color: white;
+    color: variables.$white-color;
     text-decoration: none;
     font-size: 12px;
     padding-right: 20px;
@@ -221,12 +230,12 @@ footer > .footer-container > .footer-links > ul {
 
 footer > .footer-container > .footer-links > .footer-socials > li, a {
     display: inline;
-    color: white;
+    color: variables.$white-color;
     text-decoration: none;
     font-size: 15px;
     text-align: left;
     padding: 8px 2px;
-    background-color: #192140;
+    background-color: variables.$primary-color;
     border-radius: 50%;
 }
 
@@ -243,21 +252,21 @@ footer > .footer-container > .footer-links > .footer-rights li a{
     position: absolute; 
     top: 0; 
     background:linear-gradient(rgb(25,33,64),(25,33,64, 0.5)); 
-    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    background: rgba(0, 0, 0, 0.5); 
     color: #f1f1f1; 
     width: 89%;
     height: 125px;
     border-radius: 10px 10px 0 0;
     transition: .5s ease;
     opacity:0;
-    color: white;
+    color: variables.$white-color;
     font-size: 20px;
     padding: 20px;
     text-align: center;
 }
 
 .overlay > a {
-    color: #9D9DB5;
+    color: variables.$default-color;
     background-color: transparent;
     float: right;
     padding-top: 0;
@@ -266,7 +275,7 @@ footer > .footer-container > .footer-links > .footer-rights li a{
 }
 
 .overlay > a:hover{
-    color: #DCF10D;
+    color: variables.$active-color;
 }
 
   
@@ -278,7 +287,7 @@ footer > .footer-container > .footer-links > .footer-rights li a{
 
     header > nav {
         width: 100%;
-        background-color: #192140;
+        background-color: variables.$primary-color;
         float: right;
     }
 
@@ -298,7 +307,7 @@ footer > .footer-container > .footer-links > .footer-rights li a{
     nav > .nav-link > ul > li {
         display: block;
         padding: 20px 0;
-        background-color: #192140;
+        background-color: variables.$primary-color;
     }
 
     .btn-signup {

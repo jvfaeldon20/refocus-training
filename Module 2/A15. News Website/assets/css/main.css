@@ -19,9 +19,9 @@ header {
 
 nav {
   width: 1200px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
-  margin: auto;
   padding-top: 25px;
 }
 
@@ -42,7 +42,7 @@ nav > .nav-link > ul {
 
 nav > .nav-link > ul > li, a {
   display: inline;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
@@ -50,7 +50,7 @@ nav > .nav-link > ul > li, a {
 }
 
 nav > .nav-link > ul > li > .nav-link:hover {
-  color: #dcf10d;
+  color: #DCF10D;
 }
 
 nav > .nav-toggle {
@@ -60,7 +60,7 @@ nav > .nav-toggle {
 }
 
 .btn-signup {
-  font-weight: bold;
+  font-weight: 700;
   color: #9D9DB5;
   margin-left: 30px;
 }
@@ -99,14 +99,14 @@ nav > .nav-toggle {
 }
 
 .inactive {
-  color: #9D9DB5;
+  color: transparent;
 }
 
 main > .main-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   width: 1200px;
   margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 main > .main-container > .card {
@@ -119,6 +119,10 @@ main > .main-container > .card {
 
 main > .main-container > .card:hover .overlay {
   opacity: 1;
+}
+
+main > .main-container > .card:hover .inactive {
+  color: #192140;
 }
 
 main > .main-container > .card > .img-size {
@@ -207,7 +211,7 @@ footer > .footer-container > .footer-blog > ul {
 
 footer > .footer-container > .footer-blog > ul > li, a {
   display: inline;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-size: 12px;
   padding-right: 20px;
@@ -221,7 +225,7 @@ footer > .footer-container > .footer-links > ul {
 
 footer > .footer-container > .footer-links > .footer-socials > li, a {
   display: inline;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-size: 15px;
   text-align: left;
@@ -243,14 +247,14 @@ footer > .footer-container > .footer-links > .footer-rights li a {
   position: absolute;
   top: 0;
   background: linear-gradient(rgb(25, 33, 64), 25, 33, 64, 0.5);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 89%;
   height: 125px;
   border-radius: 10px 10px 0 0;
   transition: 0.5s ease;
   opacity: 0;
-  color: white;
+  color: #ffffff;
   font-size: 20px;
   padding: 20px;
   text-align: center;
@@ -266,7 +270,7 @@ footer > .footer-container > .footer-links > .footer-rights li a {
 }
 
 .overlay > a:hover {
-  color: #DCF10D;
+  color: #0266FF;
 }
 
 @media screen and (max-width: 600px) {

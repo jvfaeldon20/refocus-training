@@ -102,20 +102,23 @@ function getData(jsonData){
     
         // DOM element classes 
         card.className          = `card card-${i}`
-        card.setAttribute("onclick", `toggleRead(${i})`)
         cardImage.className     = "img-size" 
         cardItem.className      = "card-item"
-        cardReadMark.className  = "read-mark"
+        cardReadMark.className  = `read-mark read-${i}`
         cardHeader.className    = 'card-header'
         cardFooter.className    = "card-footer"
         cardOverlay.className   = "overlay"
+
+        // DOM Events
+        cardReadMark.setAttribute("onclick", `toggleRead(${i})`)
+        cardOverlay.setAttribute("onclick", `toggleRemoveCard(${i})`)
     
         // DOM attributes
         cardImage.src           = `${jsonData[i].image_path}`;
         cardReadMark.innerHTML  = btnReadMark
         cardHeader.innerText    = `${jsonData[i].title}` 
         cardFooter.innerHTML    = `<ul><li class="publish-date">${jsonData[i].publish_date}</li><li>${btnFavorite}</li></ul>`
-        cardOverlay.innerHTML   = `<a onclick="toggleRemoveCard(${i})"><i class="fa-regular fa-circle-xmark"></i></a>`
+        cardOverlay.innerHTML   = `<a><i class="fa-regular fa-circle-xmark"></i></a>`
     
         // DOM eleement append
         cardItem.appendChild(cardReadMark)
@@ -168,8 +171,9 @@ function toggleRead(index){
    jsonData[index].is_read = !jsonData[index].is_read
 
     // updating the ui
-   let btnCard = document.querySelector(`.card-${index}`)
+   let btnRead = document.querySelector(`.read-${index}`)
    let readIcon = document.getElementById(`read-icon_${index}`)
+
 
    readIcon.classList.remove('fa-regular')
    readIcon.classList.add('fa-solid')
