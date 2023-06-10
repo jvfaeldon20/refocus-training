@@ -43,19 +43,19 @@
                 <label>Your answer:</label>
                 <div class="form-group">
                     <span>
-                        <input class="form-checkbox" type="checkbox" name="answer3[]" value="parrot">
+                        <input class="form-checkbox" type="checkbox" name="answer3[]" value="correct">
                         <label>Parrot</label>
                     </span>
                     <span>
-                        <input class="form-checkbox" type="checkbox" name="answer3[]" value="eagle">
+                        <input class="form-checkbox" type="checkbox" name="answer3[]" value="correct">
                         <label>Eagle</label>
                     </span>
                     <span>
-                        <input class="form-checkbox" type="checkbox" name="answer3[]" value="penguin">
+                        <input class="form-checkbox" type="checkbox" name="answer3[]" value="wrong">
                         <label>Penguin</label>
                     </span>
                     <span>
-                        <input class="form-checkbox" type="checkbox" name="answer3[]" value="crow">
+                        <input class="form-checkbox" type="checkbox" name="answer3[]" value="correct">
                         <label>Crow</label>
                     </span>
                 </div>
@@ -129,24 +129,15 @@
         }
 
         function Q3(){
-            score = 0
+            let score = 0
             let ans3 = 0
             let checks = document.querySelectorAll('input[type="checkbox"]:checked')
-            for(let i in checks){
-                if(checks[i].value == 'parrot'){
-                    ans3 += 1
-                }
-                
-                if(checks[i].value == 'eagle'){
-                    ans3 += 1
-                }
-                
-                if(checks[i].value == 'crow'){
+            for(let i=0; i < checks.length; i++){
+                if(checks[i].value == 'correct'){
                     ans3 += 1
                 }
             }
-            
-            score = 0
+
             question3.style.backgroundColor = 'lightcoral'
             if(ans3 == 3) {
                 score = 1
