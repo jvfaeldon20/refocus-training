@@ -9,6 +9,7 @@ html {
 
 body {
   font-family: "Inter";
+  overflow-x: hidden;
 }
 
 header {
@@ -307,7 +308,7 @@ footer > .footer-container > .footer-links > .footer-rights li a {
   }
   main > .main-container {
     grid-template-columns: 1fr;
-    margin-left: 95px;
+    margin-left: 70px;
   }
   body {
     overflow-x: hidden;
