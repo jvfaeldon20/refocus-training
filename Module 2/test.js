@@ -107,9 +107,9 @@
 // // }
 
 
-// // let arr = [1, 2, 3, 4,5]
-// // console.log(arr)
-// // arr.pop()
+// let arr = [1, 2, 3, 4,5]
+// arr.splice(2, 0)
+// console.log(arr)
 
 // // console.log(arr)
 
@@ -131,3 +131,28 @@
 //   const result = inventory.find(({ name }) => name === "cherries");
   
 //   console.log(result.quantity); // { name: 'cherries', quantity: 5 }
+
+
+function getTwoFactors(arrNum, targetSum) {
+    const numMap = {}; 
+    for (let i = 0; i < arrNum.length; i++) {
+     // getting complement factor
+      const factor = targetSum - arrNum[i];
+    
+      // getting other complement  
+      if (numMap[factor] !== undefined) {
+        return [arrNum[i], factor];
+      }
+
+      numMap[arrNum[i]] = i;
+    }
+    return [];
+
+  }
+  
+  // Test
+  const arrNum = [2, 4, 6, 8, 10];
+  const targetSum = 8;
+  const result = getTwoFactors(arrNum, targetSum);
+//   console.log(result);
+  

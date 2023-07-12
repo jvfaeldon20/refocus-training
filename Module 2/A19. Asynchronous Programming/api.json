@@ -1,0 +1,22 @@
+[
+    {
+      "itemID": 1,
+      "itemName": "Microphone",
+      "quantity": 5
+    },
+    {
+      "itemID": 2,
+      "itemName": "Table",
+      "quantity": 2
+    },
+    {
+      "itemID": 3,
+      "itemName": "Monitor",
+      "quantity": 3
+    },
+    {
+      "itemID": 4,
+      "itemName": "Keyboard",
+      "quantity": 2
+    }
+]
